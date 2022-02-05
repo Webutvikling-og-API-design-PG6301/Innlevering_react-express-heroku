@@ -1,3 +1,3 @@
-# Innlevering_react-express-heroku
+## Innlevering_react-express-heroku
 
 * [x] - install parcel
