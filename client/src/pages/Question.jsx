@@ -23,7 +23,7 @@ const Question = ({ setIsRightAnswer, setIsAnsweredQuestion }) => {
         .filter((answer) => question.answers[answer])
         .map((value) => {
           return (
-            <div key={question.id}>
+            <div key={value} data-testid={value}>
               <button onClick={() => handleRightAnswer(value)}>
                 {question.answers[value]}
               </button>
