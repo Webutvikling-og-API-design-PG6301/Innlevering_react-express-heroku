@@ -7,7 +7,9 @@
     "format": "prettier --write src/**/*.{ts,tsx,js,jsx} ",
     "format:check": "prettier --check src/**/*.{ts,tsx,js,jsx}",
     "dev": "parcel ./src/index.html",
-    "test": "jest"
+    "test": "jest",
+    "verify": "npm run test:coverage",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +29,10 @@
     ]
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "collectCoverageFrom": [
+      "*.jsx"
+    ]
   },
   "dependencies": {
     "react": "^17.0.2",
