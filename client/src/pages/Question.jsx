@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { randomQuestion, isCorrectAnswer } from "../components/questions";
+
+export const QuestionContext = React.createContext({ randomQuestion });
+
 const Question = ({ setIsRightAnswer, setIsAnsweredQuestion }) => {
   const [question, setQuestion] = useState(randomQuestion());
   const navigate = useNavigate();
