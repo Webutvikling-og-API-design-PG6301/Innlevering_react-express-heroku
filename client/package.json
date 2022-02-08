@@ -11,6 +11,10 @@
     "verify": "npm run test:coverage",
     "test:coverage": "jest --coverage"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webutvikling-og-API-design-PG6301/Innlevering_react-express-heroku.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
