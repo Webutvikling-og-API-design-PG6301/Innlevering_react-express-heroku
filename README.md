@@ -18,6 +18,10 @@
 
 ### Server side
 
-- [ ] - install express
-- [ ] - make server listen to port 3000
-- [ ] -
+- [x] - install express
+- [x] - make server listen to port 3000
+- [x] - Running express server
+- [x] - first GET
+- [] -
+- [] -
+- [] -
