@@ -19,6 +19,8 @@
 	},
 	"homepage": "https://github.com/Webutvikling-og-API-design-PG6301/Innlevering_react-express-heroku#readme",
 	"devDependencies": {
-		"concurrently": "^7.0.0"
+		"concurrently": "^7.0.0",
+		"jest": "^27.5.1",
+		"prettier": "^2.5.1"
 	}
 }
