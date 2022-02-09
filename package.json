@@ -19,8 +19,25 @@
 	},
 	"homepage": "https://github.com/Webutvikling-og-API-design-PG6301/Innlevering_react-express-heroku#readme",
 	"devDependencies": {
+		"@babel/preset-env": "^7.16.11",
+		"@babel/preset-react": "^7.16.7",
+		"babel-jest": "^27.5.1",
 		"concurrently": "^7.0.0",
 		"jest": "^27.5.1",
 		"prettier": "^2.5.1"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-react",
+			"@babel/preset-env"
+		]
+	},
+	"jest": {
+		"testEnvironment": "jsdom",
+		"collectCoverageFrom": [
+			"*.jsx",
+			"src/**/*.js",
+			"src/**/*.jsx"
+		]
 	}
 }
