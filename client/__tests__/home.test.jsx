@@ -32,27 +32,4 @@ describe("Quiz application", () => {
     );
     expect(element.innerHTML).toMatchSnapshot();
   });
-
-  it("should simulate correct answer", () => {
-    const setIsAnsweredQuestion = jest.fn();
-    const setIsRightAnswer = jest.fn();
-
-    const element = document.createElement("div");
-    ReactDOM.render(
-      <MemoryRouter initialEntries={["/question"]}>
-        <QuestionContext.Provider value={{ randomQuestion: () => question }}>
-          <Question
-            setIsRightAnswer={setIsRightAnswer}
-            setIsAnsweredQuestion={setIsAnsweredQuestion}
-          />
-        </QuestionContext.Provider>
-      </MemoryRouter>,
-      element
-    );
-
-    Simulate.click(element.querySelector("[data-testid=answer_a] button"));
-    expect(setIsAnsweredQuestion).toBeCalled();
-    expect(setIsRightAnswer).toBeCalled();
-    expect(element.innerHTML).toMatchSnapshot();
-  });
 });
