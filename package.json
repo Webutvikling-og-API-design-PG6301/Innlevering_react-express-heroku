@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "cd client & npm run dev",
-		"verify": "npm run test:coverage",
+		"verify": "cd client && npm run verify",
 		"test:coverage": "jest --collectCoverage",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
