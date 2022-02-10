@@ -34,10 +34,7 @@
     ]
   },
   "jest": {
-    "testEnvironment": "jsdom",
-    "collectCoverageFrom": [
-      "client/src/**/*.jsx"
-    ]
+    "testEnvironment": "jsdom"
   },
   "dependencies": {
     "react": "^17.0.2",
