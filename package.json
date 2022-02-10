@@ -36,7 +36,7 @@
 		"testEnvironment": "jsdom",
 		"collectCoverageFrom": [
 			"*.jsx",
-			"src/**/*.jsx"
+			"client/**/*.jsx"
 		]
 	},
 	"dependencies": {
