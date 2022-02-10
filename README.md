@@ -1,5 +1,9 @@
 ## Innlevering_react-express-heroku
 
+[![Coverage Status](https://coveralls.io/repos/github/Webutvikling-og-API-design-PG6301/Innlevering_react-express-heroku/badge.svg)](https://coveralls.io/github/Webutvikling-og-API-design-PG6301/Innlevering_react-express-heroku)
+
+
+
 ### Client side
 
 - [x] - create a react app with parcel
