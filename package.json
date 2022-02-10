@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cd client & npm run dev",
     "verify": "cd client && npm run verify",
-    "test:coverage": "jest --collectCoverage",
+    "test:coverage": "jest --coverage",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
