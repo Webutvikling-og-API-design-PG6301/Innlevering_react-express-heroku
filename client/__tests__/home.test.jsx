@@ -14,6 +14,7 @@ describe("Quiz application", () => {
       element
     );
     expect(element.innerHTML).toMatchSnapshot();
+    expect(element.querySelector("h1").innerHTML).toEqual("Home page");
   });
 
   it("should show answers", () => {
@@ -23,6 +24,9 @@ describe("Quiz application", () => {
         <Answer isRightAnswer={3} isAnsweredQuestion={5} />
       </MemoryRouter>,
       element
+    );
+    expect(element.querySelector("[data-testid=status]").textContent).toEqual(
+      "Your score is 3 / 5"
     );
     expect(element.innerHTML).toMatchSnapshot();
   });

@@ -9,7 +9,7 @@ const Answer = ({ isRightAnswer, isAnsweredQuestion }) => {
         <Route path={"wrong"} element={<h1>Wrong!</h1>} />
       </Routes>
 
-      <h2>
+      <h2 data-testid={"status"}>
         Your score is {isRightAnswer} / {isAnsweredQuestion}
       </h2>
       <Link to="/">
