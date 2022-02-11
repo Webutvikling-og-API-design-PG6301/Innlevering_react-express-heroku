@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { randomQuestion, isCorrectAnswer } from "../components/questions";
 
 export const QuestionContext = React.createContext({ randomQuestion });
 
 const Question = ({ setIsRightAnswer, setIsAnsweredQuestion }) => {
-  const [question, setQuestion] = useState(randomQuestion());
+  const [question, setQuestion] = useState("");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    const response = await fetch("/api/question");
+    const data = await response.json();
+    setQuestion(await data);
+  };
+
   const handleRightAnswer = (answer) => {
     if (isCorrectAnswer(question, answer)) {
       console.log("right answer");
@@ -19,6 +30,12 @@ const Question = ({ setIsRightAnswer, setIsAnsweredQuestion }) => {
       navigate("/answer/wrong");
     }
   };
+
+  if (!question) {
+    return <h1>Loading...</h1>;
+  }
+
+  console.log(question);
   return (
     <div>
       <h1>{question.question}</h1>
