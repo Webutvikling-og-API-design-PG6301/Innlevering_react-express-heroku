@@ -4,9 +4,12 @@
   "description": "- [x] - create a react app with parcel\r - [x] - install react dependencies (React, ReactDOM & react-router-dom)\r - [x] - make react app run as expected /w parcel\r - [x] - structure react app and its components a proper way\r - [x] - route the application with react-router-dom\r - [x] - install jest and babel\r - [x] - configure babel so that the react app runs properly with jest and babel\r - [x] - make first passing test\r - [ ] - set up github actions\r - [ ] - connect coveralls with github actions and make a badge\r - [ ] - Get more coverage with jest\r - [ ] -\r - [ ] -",
   "main": "index.js",
   "scripts": {
-    "dev": "cd client & npm run dev",
-    "verify": "cd client && npm run verify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write client/src/**/*.{ts,tsx,js,jsx}",
+    "format:check": "prettier --check client/src/**/*.{ts,tsx,js,jsx}",
+    "dev": "cd client && npm run dev",
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
+    "verify": "npm run format:check && npm run test:coverage"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
   },
   "homepage": "https://github.com/Webutvikling-og-API-design-PG6301/Innlevering_react-express-heroku#readme",
   "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "babel-jest": "^27.5.1",
@@ -27,16 +31,13 @@
     "jest": "^27.5.1",
     "prettier": "^2.5.1"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "babel": {
     "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ]
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "collectCoverageFrom": [
-      "client/**/*{.jsx,js}"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ]
   },
   "dependencies": {

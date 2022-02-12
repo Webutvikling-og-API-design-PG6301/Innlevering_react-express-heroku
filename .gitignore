@@ -1,7 +1,7 @@
 
 /client/dist/
 /client/.parcel-cache/
-/client/coverage/
+/coverage/
 /client/node_modules/
 /server/node_modules/
 /.idea/

@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Quiz application should show answers 1`] = `"<div><h2 data-testid=\\"status\\">Your score is 3 / 5</h2><a href=\\"/\\"><button>Return to home</button></a><a href=\\"/question\\"><button>New quiz</button></a></div>"`;
-
-exports[`Quiz application should show home component 1`] = `"<div><h1>Home page</h1><a href=\\"/question\\"><button>New quiz</button></a><a href=\\"/answer/*\\"><button>Show anwers</button></a></div>"`;

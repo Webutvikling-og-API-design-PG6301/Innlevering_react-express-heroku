@@ -6,10 +6,7 @@
   "scripts": {
     "format": "prettier --write src/**/*.{ts,tsx,js,jsx}",
     "format:check": "prettier --check src/**/*.{ts,tsx,js,jsx}",
-    "dev": "parcel ./src/index.html",
-    "test": "jest",
-    "test:coverage": "jest --collect-coverage",
-    "verify": "npm run format:check && npm run test:coverage"
+    "dev": "parcel ./src/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,24 +16,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-jest": "^27.5.1",
-    "jest": "^27.5.0",
     "parcel": "^2.2.1",
     "prettier": "^2.5.1"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      "@babel/preset-env"
-    ]
-  },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "collectCoverageFrom": [
-      "src/**/*{.jsx,js}"
-    ]
   },
   "dependencies": {
     "axios": "^0.25.0",
